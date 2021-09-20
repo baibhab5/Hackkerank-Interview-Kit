@@ -1,0 +1,15 @@
+int height(Node* root) {
+        int lefth,righth,ans;
+        // Write your code here.
+        if (root == NULL) {
+            return 0;}
+        if(root -> left== NULL && root-> right==NULL){
+            return 0;
+        }
+        else{
+            lefth = height(root->left);
+            righth = height(root->right);
+            ans= 1+ max(lefth,righth);
+            return ans;
+        }    
+    }
